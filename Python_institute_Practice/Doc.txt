@@ -1,0 +1,329 @@
+https://docs.python.org/es/3/tutorial/index.html
+https://www.w3schools.com/python/
+https://entrenamiento-python-basico.readthedocs.io/es/3.7/
+
+
+
+###########MODULO 2##############
+LITERALES
+
+*Entreo
+print(2)
+
+*Octal
+print(0o123)
+
+*Hexadecimal
+print(0x123)
+
+*Flotantes
+print(0.0000000000000000000001)
+
+*Cadenas
+print('I\'m Monty Python.')
+print("I'm Monty Python.")
+print('"Estoy"\n""aprendiendo""\n"""Python""" ')
+
+*Booleano
+print(True > False)
+
+*None
+NonType
+
+
+OPERADORES
++, -, *, /, //(division entera|floor division.), %, **(potencia)
+La operación de división(/) retorna siempre flotante
+Jerarquía de prioridades: algunos operadores actúen antes que otros
+Python tienen un enlazado hacia la izquierda, el cálculo de la expresión es realizado de izquierda a derecha.
+Sin embargop, el operador de exponenciación utiliza enlazado del lado derecho.
+
+
+Prioridades
+Prioridad		Operador	
+1	+, -		unario
+2	**	
+3	*, /, //, %	
+4	+, -		binario
+
+*Operadores y paréntesis
+las sub-expresiones dentro de los paréntesis siempre se calculan primero.
+print((5 * ((25 % 13) + 100) / (2 * 13)) // 2)
+
+*Modulo
+14 // 4
+3 * 4
+14 - 12 da como resultado 2 → este es el residuo.
+
+Una expresión es una combinación de (valores, variables, operadores, llamadas a funciones) las cuales se evaluan y dan como resultado un valor.
+Los operadores son símbolos especiales o palabras clave que son capaces de operar en los valores y realizar operaciones matemáticas.
+
+
+VARIABLES
+Python ofrece "cajas" (contenedores)  --> Variables
+*Variables correctas: MiVariable, i, t34, Tasa_Cambio, contador, dias_para_navidad, ElNombreEsTanLargoQueSeCometeranErroresConEl, _.Adiós_Señora, sûr_la_mer, Einbahnstraße, переменная
+*Variables incorrectas: 10t , Tasa Cambio, Nombres de palabras reservadas(['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield'])
+*Asignar valor una variable: El signo de igual es de hecho un operador de asignación. 
+var = 1
+print(var)
+var = var + 1
+print(var)
+
+
+###CARACTERES###
+.title()		#Convierte la cadena en titulo iniciales en mayuscula.
+.capitalize()	#Primera palabra en mayuscula, el resto en minuscula.
+.upper()		#Mayuscula.
+.lower()		#Minuscula.
+.count("hola")	#Cuenta la cantidad de veces que aparece la palabra en la cadena.
+.find("Hola")  	#Encuentra la posición de la palabra "Hola" en una cadena
+.index("hola")	#Encuentra la posición de la palabra "Hola" en una cadena
+.replace("Hola", "Holaa")	#Reemplaza una cadena por otra
+
+
+*Operadores Abreviados: x = x * 2 --> x *= 2                (operadores de asignación compuesta)
+						var = var / 2 --> var /= 2
+						rem = rem % 10 --> rem %= 10
+						x = x ** 2 ⇒ x **= 2
+						
+Python es un lenguaje de tipo dinámico, no se necesita declarar variables en él. (2.1.4.3) Para asignar valores a las variables.
+
+ 
+*Conversión de datos (casting): 
+La función int() toma un argumento (por ejemplo, una cadena: int(string)) e intenta convertirlo a un valor entero;
+La función float() toma un argumento (por ejemplo, una cadena: float(string)) e intenta convertirlo a flotante.
+La función str() puede convertir un numero a una cadena,
+
+	leg_a = float(input("Inserta la longitud del primer cateto: "))
+	leg_b = float(input("Inserta la longitud del segundo cateto: "))
+	hypo = (leg_a**2 + leg_b**2) ** .5
+	print("La longitud de la hipotenusa es:", hypo)
+
+El signo de + (más), al ser aplicado a dos cadenas, se convierte en un operador de concatenación: "ab" + "ba" = abba
+El signo de * (asterisco), cuando es aplicado a una cadena y a un número (o a un número y cadena) se convierte en un operador de replicación. "James" * 3 produce "JamesJamesJames"
+
+
+0.5 + 1 + 16
+
+
+
+#####MODULO3#####
+*Comparación: operador de igualdad
+	= es un operador de asignación --> a = b assigna a la varable a el valor de b.
+	== es una pregunta ¿Son estos valores iguales? así que a == b compara a y b. (operador binario con enlazado del lado izquierdo.)
+	
+*Desigualdad: el operador no es igual a (!=)
+	El operador != (no es igual a) también compara los valores de dos operandos.
+	
+*Operadores de comparación: mayor o mayor igual que: black_sheep > white_sheep  # mayor que || centigrade_outside ≥ 0.0  # mayor o igual que
+*Operadores de comparación: menor o menor igual que: current_velocity_mph < 85  # Menor que || current_velocity_mph ≤ 85  # Menor o igual que
+
+Prioridad			Operador	
+1	+, -			unario
+2	**	
+3	*, /, //, %	
+4	+, -			binario
+5	<, <=, >, >=	
+6	==, !=
+
+#######-IF-#######
+*Sentencias condicionales IF: las sentencias condicionales deben tener sangría.
+	Si la expresion representa la verdad (valor no es igual a cero), las sentencias con sangría se ejecutarán.
+	Si la expresión no representa la verdad (su valor es igual a cero), las sentencias con sangría se omitirán.
+if sheep_counter >= 120:
+    make_a_bed()
+feed_the_sheepdogs()
+
+*Ejecución condicional: la sentencia if-else - else - esta es una palabra clave reservada.
+if true_or_false_condition:
+    perform_if_condition_true
+else:
+    perform_if_condition_false
+	
+*Sentencias if-else anidadas
+Este uso de la sentencia if se conoce como anidamiento; recuerda que cada else se refiere al if que se encuentra en el mismo nivel de sangría;
+
+*Sentencia elif
+elif se usa para verificar más de una condición, y para detener cuando se encuentra la primera sentencia verdadera.
+es una forma más corta de else-if.
+
+*Pseudocódigo e introducción a los bucles (CICLOS)
+largest_number = -999999999
+number = int(input())
+if number == -1:
+    print(largest_number)
+    exit()
+if number > largest_number:
+    largest_number = number
+# Ir a la línea 02
+
+TIPS IF:
+	*Una única sentencia if.
+	*Una serie de sentencias if-if
+	*Una sentencia de if-else
+	*Una serie de sentencias if seguidas de un else, Cada if se prueba por separado. El cuerpo de else se ejecuta si el último if es False.
+	*La sentencia if-elif-else, Si la condición para if es False, el programa verifica las condiciones de los bloques elif posteriores: el primer elif que sea True es el que se ejecuta. Si todas las condiciones son False, se ejecutará el bloque else.
+	*Sentencias condicionales anidadas if-(if-else)else-(if-else)
+
+
+#######-WHILE-#######
+*WHILE
+Bucles (ciclos) en el código con while: El bucle While es similar al if, la diferencia sintáctica es la palabra while en lugar de la palabra if.
+*Un bucle infinito: también denominado bucle sin fin, el programa que se repite indefinidamente (bucle sin fin).
+counter = 5
+while counter:
+    print("Dentro del bucle.", counter)
+    counter -= 1
+print("Fuera del bucle.", counter)
+
+*FOR
+Bucles en tu código con for: 
+el bucle for está diseñado para realizar tareas más complicadas, puede "explorar" grandes colecciones de datos elemento por elemento
+	
+	for i in range(10):
+		print("El valor de i es actualmente", i)
+	
+la función range() solo acepta enteros como argumentos y genera secuencias de enteros.
+
+*bucle for y la función range() con tres argumentos
+-El tercer argumento es un incremento
+
+	for i in range(2, 8, 3): #Primer argumento (Inicio), #Segundo argumento  (Donde para), #T
+		print("El valor de i es actualmente", i)
+		
+		
+*TIP: -El conjunto generado por range() debe ordenarse en un orden ascendente. El segundo argumento de range() debe ser mayor que el primero.
+	  -Dulces sintácticos o azúcar sintáctica: Simplifican el trabajo del desarrollador (break, continue)
+		break: Sale del bucle inmediatamente
+		continue: Se usa para omitir el bloque actual y avanzar a la siguiente iteración, se comporta como si el programa hubiera llegado repentinamente al final del cuerpo
+for i in range(2, 1):
+    print("El valor de i es actualmente", i)
+
+
+*El bucle while y la rama else
+*El bucle for y la rama else
+
+Función RANGE: La función range(start, stop, step)
+	start: parámetro opcional, es el número de inicio de la secuencia (0 por defecto)
+	stop: parámetro opcional, es el final de la secuencia generada (no está incluido).
+	y step, parámetro opcional, es la diferencia entre los números en la secuencia es (1 por defecto.)
+
+*EXPRESIONES LOGICAS:
+los operadores lógicos no penetran en el nivel de bits de su argumento. Solo les interesa el valor entero final.
+Los operadores bit a bit son más estrictos: tratan con cada bit por separado.
+x = x & y	x &= y
+x = x | y	x |= y
+x = x ^ y	x ^= y
+Cada bit de la variable almacena un valor de si/no.
+
+*Desplazamiento izquierdo binario y desplazamiento derecho binario
+Python ofrece otra operación relacionada con los bits
+
+
+Prioridad	Operador	
+1	~, +, -	unario
+2	**	
+3	*, /, //, %	
+4	+, -	binario
+5	<<, >>	
+6	<, <=, >, >=	
+7	==, !=	
+8	&	
+9	|	
+10	=, +=, -=, *=, /=, %=, &=, ^=, |=, >>=, <<=
+
+
+LISTAS:
+Las variables que hemos declarado variables que pueden almacenar exactamente un valor dado a la vez. Tales variables a veces se denominan escalares por analogía con las matemáticas.
+
+
+numbers = [10, 5, 7, 2, 1]
+print("Contenido de la lista original:", numbers)  # Imprimiendo contenido de la lista original.
+*Asignar un nuevo valor de 111 al primer elemento en la lista
+numbers[0] = 111
+print("\nPrevio contenido de la lista:", numbers)  # Imprimiendo contenido de la lista anterior.
+*Copiar el valor del quinto elemento al segundo elemento
+numbers[1] = numbers[4]  # Copiando el valor del quinto elemento al segundo elemento.
+print("Nuevo contenido de la lista:", numbers)  # Imprimiendo el contenido de la lista actual.
+*verificar la longitud actual de la lista
+print("\nLongitud de la lista:", len(numbers))  # Imprimiendo la longitud de la lista.
+
+El valor dentro de los corchetes que selecciona un elemento de la lista se llama un índice, mientras que la operación de seleccionar un elemento de la lista se conoce como indexación.
+
+
+*Accediendo al contenido de la lista
+print(numbers[0]) # Accediendo al primer elemento de la lista.
+
+*Eliminando elementos de una lista
+del numbers[1]
+No puedes acceder a un elemento que no existe , no puedes obtener su valor ni asignarle un valor.
+
+*Los índices negativos son válidos
+print(numbers[-1]) #Un elemento con un índice igual a -1 es el último en la lista.
+
+
+*Funciones frente a métodos
+-Un método es propiedad de los datos para los que trabaja, mientras que una función es propiedad de todo el código.
+Invoación a un metodo: result = data.method(arg)
+
+*Agregando elementos a una lista: append() e insert()
+list.append(value) #Añade un elemento al final de la lista
+list.insert(location, value)  #Insert un elemento en cualquier lugar de la lista
+
+#Lista vacia
+my_list = []
+
+#Bucle FOR en las listas: calcular la suma de todos los valores almacenados en la lista my_list
+
+#Variables Auxiliares para ordenar listas
+variable_1 = 1
+variable_2 = 2
+
+auxiliary = variable_1
+variable_1 = variable_2
+variable_2 = auxiliary
+
+
+TIPS: La lista es un tipo de dato en Python que se utiliza para almacenar múltiples objetos.
+Es una colección ordenada y mutable de elementos separados por comas entre corchetes.
+my_list = [1, None, True, "Soy una cadena", 256, 0]
+
+*Las listas se pueden indexar y actualizar
+*Las listas pueden estar anidadas
+*Los elementos de la lista y las listas se pueden eliminar
+*Las listas pueden ser iteradas mediante el uso del bucle for
+*La función len() se puede usar para verificar la longitud de la lista 
+*Una invocación típica de función tiene el siguiente aspecto: result = function(arg), mientras que una invocación típica de un método se ve así: result = data.method(arg).
+
+
+#Ordenamiento Burbuja
+Las listas se pueden ordenar de dos maneras, ascendente(de menor a mayor) y descendente( de mayor a menor)
+comparamos los elementos adyacentes y, al intercambiar algunos de ellos, logramos nuestro objetivo.
+
+1. Puedes usar el método sort() para ordenar los elementos de una lista.
+2. El método de lista llamado reverse(), sirve para invertir la lista.
+
+#Rebanadas
+Hacer una copia nueva de una lista, o partes de una lista.
+Copia el contenido de la lista, no el nombre de la lista. 
+Una rebanada de este tipo crea una nueva lista (de destino), tomando elementos de la lista de origen: 
+los elementos de los índices desde el principio hasta el fin - 1.
+
+#Rebanadas - índices negativos
+start es el índice del primer elemento incluido en la rebanada.
+end es el índice del primer elemento no incluido en la rebanada.
+Si start especifica un elemento que se encuentra más allá del descrito por end (desde el punto de vista inicial de la lista), la rebanada estará vacía:
+
+#Rebanadas: continuación
+Si omites el start en tu rebanada, se supone que deseas obtener un segmento que comienza en el elemento con índice 0.
+Si omites el end en tu rebanada, se supone que deseas que el segmento termine en el elemento con el índice len(my_list)
+el omitir el inicio y fin crea una copia de toda la lista:
+
+#Los operadores in y not in
+capaces de revisar la lista para verificar si un valor específico está almacenado dentro de la lista o no.
+
+
+
+
+
+
