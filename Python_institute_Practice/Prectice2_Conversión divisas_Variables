@@ -1,0 +1,59 @@
+print("De Millas a Kilometros")
+kilometers = 12.25
+miles = 7.38
+
+miles_to_kilometers = miles * 1.60934
+kilometers_to_miles = kilometers / 1.60934
+
+print(miles, "millas son", round(miles_to_kilometers, 2), "kilómetros")
+print(kilometers, "kilómetros son", round(kilometers_to_miles, 2), "millas")
+print("\n")
+
+print("De USD a EUR")
+dolar = 10
+euro = 15
+dolar_to_euro = dolar * 0.92
+euro_to_dolar = euro / 0.92
+
+print(dolar, "dolares son: ", round(dolar_to_euro, 2), "Euros")
+print(euro, "euros son: ", round(euro_to_dolar, 2), "Dolares")
+
+
+print("Operadores y Expresiones")
+x = -1 # codifica aquí tus datos de prueba
+x = float(x)
+y = (3*(x ** 3)- 2*(x ** 2) + 3 * x -1)# escribe tu código aquí
+print("y =", y)
+
+
+print("Operadores de Cadenas Rectangulo")
+print("+" + 10 * "-" + "+")
+print(("|" + " " * 10 + "|\n") * 5, end="")
+print("+" + 10 * "-" + "+")
+
+print("Triangulo Rectangulo")
+leg_a = float(input("Inserta la longitud del primer cateto: "))
+leg_b = float(input("Inserta la longitud del segundo cateto: "))
+print("La longitud de la hipotenusa es " + str((leg_a**2 + leg_b**2) ** .5))
+
+
+print("Entradas y Salidas simples")
+a = float(input("Ingrese un número a: ")) # ingresa un valor flotante para la variable a aquí
+b = float(input("Ingrese un número b: ")) # ingresa un valor flotante para la variable b aquí
+
+suma_ab = a + b# muestra el resultado de la suma aquí 
+resta_ab = a - b# muestra el resultado de la resta aquí
+mult_ab = a * b# muestra el resultado de la multiplicación aquí
+div_ab = a / b# muestra el resultado de la división aquí
+
+print("Suma de números: ", suma_ab)
+print("Resta de números: ", resta_ab)
+print("Multiplicación de números: ", mult_ab)
+print("Division de números: ", div_ab)
+print("\n¡Eso es todo, amigos!")
+
+
+print("Evaluar Expresion")
+x = float(input("Ingresa el valor para x: "))
+y = (1 / (x + (1 / (x + (1 / ( x + (1 /x)))))))# Escribe tu código aquí.
+print("y =", y)
