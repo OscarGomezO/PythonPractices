@@ -504,7 +504,7 @@ print(numbers)
 """
 
 
-#Llenando una lista con un FOR orden ascendente
+#Llenando una lista con un FOR orden ascendente METODO APEND
 """
 my_list = []  # Creando una lista vacía.
 
@@ -513,7 +513,7 @@ for i in range(5):
 
 print(my_list)
 """
-#Llenando una lista con un FOR orden descendente
+#Llenando una lista con un FOR orden descendente METODO INSERT
 """
 my_list = []  # Creando una lista vacía.
 
@@ -860,7 +860,7 @@ print(hits)
 """
 
 
-#EJEMPLO LISTAS 5 ELEMENTO ENCONTRADO EN EL INDICE
+#EJEMPLO LISTAS 5 ELEMENTO ENCONTRADO EN EL INDICE - ENCONTRAR LA UBICACIÓN DE UN ELEMENTO EN UNA LISTA
 """
 my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 to_find = 5
@@ -891,4 +891,195 @@ print("La lista con elementos únicos:")
 print(no_dups)
 """
 
+
+### TIPS - LISTAS
+
+#Si tienes una lista list_1, y la siguiente asignación: list_2 = list_1 esto no hace una copia de la lista list_1
+#pero hace que las variables list_1 y list_2 apunten a la misma lista en la memoria. 
+#colors = ['rojo', 'verde', 'naranja']
+#copy_whole_colors = colors[:]  # copia la lista entera
+#copy_part_colors = colors[0:2]  # copia parte de la lista
+
+#copiar una lista o parte de la lista, puedes hacerlo haciendo uso de rebanadas:
+#sample_list = ["A", "B", "C", "D", "E"]
+#new_list = sample_list[2:-1]
+#print(new_list)  # outputs: ['C', 'D']
+
+#Utilizar índices negativos para hacer uso de rebanadas. Por ejemplo:
+#sample_list = ["A", "B", "C", "D", "E"]
+#new_list = sample_list[2:-1]
+#print(new_list)  # outputs: ['C', 'D']
+
+#Los parámetros start y end son opcionales al partir en rebanadas una lista: list[start:end]
+#my_list = [1, 2, 3, 4, 5]
+#slice_one = my_list[2: ]
+#slice_two = my_list[ :2]
+#slice_three = my_list[-2: ]
+
+#print(slice_one)  # salida: [3, 4, 5]
+#print(slice_two)  # salida: [1, 2]
+#print(slice_three)  # salida: [4, 5]
+
+#Puedes eliminar rebanadas utilizando la instrucción del:
+#my_list = [1, 2, 3, 4, 5]
+#del my_list[0:2]
+#print(my_list)  # salida: [3, 4, 5]
+
+#del my_list[:]
+#print(my_list)  # delimina el contenido de la lista, genera: []
+
+#probar si algunos elementos existen en una lista o no utilizando las palabras clave in y not in
+#my_list = ["A", "B", 1, 2]
+
+#print("A" in my_list)  # salida: True
+#print("C" not in my_list)  # salida: True
+#print(2 not in my_list)  # salida: False
+
+
+
+#######################################################################
+######################---LISTAS-DENTRO-DE-LISTAS-#########MATRICES#####
+#######################################################################
+
+#Arreglos
+#Ejemplo #1: genera una lista de diez elementos y la rellena con cuadrados de diez números enteros que comienzan desde cero (0, 1, 4, 9, 16, 25, 36, 49, 64, 81)
+#squares = [x ** 2 for x in range(10)]
+
+#Ejemplo #2:crea un arreglo de ocho elementos que contiene las primeras ocho potencias del numero dos (1, 2, 4, 8, 16, 32, 64, 128)
+#twos = [2 ** i for i in range(8)]
+
+#Ejemplo #3:  crea una lista con solo los elementos impares de la lista squares.
+#odds = [x for x in squares if x % 2 != 0 ]
+
+
+#Arreglos bidimensionales - Matrices
+"""
+board = []
+
+for i in range(8):
+    row = [EMPTY for i in range(8)]
+    board.append(row)
+"""
+
+#Arreglos bidimensionales - Matrices - Tablero de Ajedrez
+""""
+EMPTY = "-"
+PAWN = "PEON"
+ROOK = "TORRE"
+KNIGHT = "CABALLO"
+board = []
+
+for i in range(8):
+    row = [EMPTY for i in range(8)]
+    board.append(row)
+
+board[0][0] = ROOK
+board[0][7] = ROOK
+board[7][0] = ROOK
+board[7][7] = ROOK
+board[4][2] = KNIGHT
+board[3][4] = PAWN
+
+print(board)
+"""
+
+#Arreglos bidimensionales - Matrices - Estación Meteorologica
+"""
+#(h es para las horas, d para el día):
+temps = [[0.0 for h in range(24)] for d in range(31)]
+#
+# La matriz se actualiza aquí.
+#
+
+total = 0.0             #Para la temperatura promedio mensual del mediodía
+highest = -100.0        #Para la temperatura más alta durante todo el mes
+hot_days = 0            #Para los días en que la temperatura al mediodía fue de al menos 20 ℃
+
+
+#temperatura promedio mensual del mediodía
+for day in temps:
+    total += day[11]
+
+average = total / 31
+print("Temperatura promedio al mediodía:", average)
+
+#temperatura más alta durante todo el mes
+for day in temps:
+    for temp in day:
+        if temp > highest:
+            highest = temp
+print("La temperatura más alta fue:", highest)
+
+#cuenta los días en que la temperatura al mediodía fue de al menos 20 ℃:
+for day in temps:
+    if day[11] > 20.0:
+        hot_days += 1
+
+print(hot_days, "fueron los días calurosos.")
+"""
+
+#Arreglos tridimensionales  -- Reserva Hotel
+"""
+#Primer paso: El tipo de elementos del arreglo. En este caso, sería un valor Booleano (True/False).
+#Paso dos: análisis de la situación. Resume la información disponible: tres edificios, 15 pisos, 20 habitaciones.
+rooms = [[[False for r in range(20)] for f in range(15)] for t in range(3)]
+#asignar una habitación en el segundo edificio, en el décimo piso, habitación 14:
+rooms[1][9][13] = True
+#desocupar el segundo cuarto en el quinto piso ubicado en el primer edificio:
+rooms[0][4][1] = False
+
+rooms[2][14][10] = True
+rooms[2][14][11] = True
+rooms[2][14][12] = True
+rooms[2][14][13] = True
+
+#Verifica si hay disponibilidad en el piso 15 del tercer edificio:
+vacancy = 0
+
+for room_number in range(20):
+    if not rooms[2][14][room_number]:
+        vacancy += 1
+"""
+
+#TIPS Puntos Clave
+"""
+#La comprensión de listas te permite crear nuevas listas a partir de las existentes de una manera concisa y elegante. 
+# La sintaxis de una comprensión de lista es la siguiente:
+[expression for element in list if conditional]
+#Es decir:
+for element in list:
+    if conditional:
+        expression
+
+#lista de cinco elementos con los primeros cinco números naturales elevados a la potencia de 3:
+cubed = [num ** 3 for num in range(5)]
+print(cubed)  # outputs: [0, 1, 8, 27, 64]
+
+#Arreglo bidimensional
+#  Una tabla de cuatro columnas y cuatro filas: un arreglo bidimensional (4x4)
+table = [[":(", ":)", ":(", ":)"],
+         [":)", ":(", ":)", ":)"],
+         [":(", ":)", ":)", ":("],
+         [":)", ":)", ":)", ":("]]
+print(table)
+print(table[0][0])  # outputs: ':('
+print(table[0][3])  # outputs: ':)'
+
+#Arreglo tridimensional
+# Cubo - un arreglo tridimensional (3x3x3)
+cube = [[[':(', 'x', 'x'],
+         [':)', 'x', 'x'],
+         [':(', 'x', 'x']],
+
+        [[':)', 'x', 'x'],
+         [':(', 'x', 'x'],
+         [':)', 'x', 'x']],
+
+        [[':(', 'x', 'x'],
+         [':)', 'x', 'x'],
+         [':)', 'x', 'x']]]
+print(cube)
+print(cube[0][0][0])  # outputs: ':('
+print(cube[2][2][0])  # outputs: ':)'
+"""
 

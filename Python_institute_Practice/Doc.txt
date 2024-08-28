@@ -232,8 +232,7 @@ Prioridad	Operador
 9	|	
 10	=, +=, -=, *=, /=, %=, &=, ^=, |=, >>=, <<=
 
-
-LISTAS:
+#######-LISTAS-#######
 Las variables que hemos declarado variables que pueden almacenar exactamente un valor dado a la vez. Tales variables a veces se denominan escalares por analogía con las matemáticas.
 
 
@@ -324,6 +323,25 @@ capaces de revisar la lista para verificar si un valor específico está almacen
 
 
 
+#######-FUNCIONES-#######
+Un método es propiedad de los datos para los que trabaja.
+Una función es propiedad de todo el código.
+
+invocación de función típica puede tener este aspecto:
+	result = function(arg)
+
+Una invocación de un método típico usualmente se ve así:
+result = data.method(arg)
+
+Un nuevo elemento puede ser añadido al final de la lista existente:
+list.append(value)
+
+El metodo insert() puede agregar un nuevo elemento en cualquier lugar de la lista, no solo al final.
+list.insert(location, value)
 
 
+##LISTAS DE LISTAS 
 
+#TIPS
+La sintaxis de una comprensión de lista es la siguiente:
+[expression for element in list if conditional]
