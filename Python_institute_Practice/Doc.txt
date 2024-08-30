@@ -321,7 +321,17 @@ el omitir el inicio y fin crea una copia de toda la lista:
 #Los operadores in y not in
 capaces de revisar la lista para verificar si un valor específico está almacenado dentro de la lista o no.
 
+Un nuevo elemento puede ser añadido al final de la lista existente:
+list.append(value)
 
+El metodo insert() puede agregar un nuevo elemento en cualquier lugar de la lista, no solo al final.
+list.insert(location, value)
+
+##LISTAS DE LISTAS 
+
+#TIPS
+La sintaxis de una comprensión de lista es la siguiente:
+[expression for element in list if conditional]
 
 #######-FUNCIONES-#######
 Un método es propiedad de los datos para los que trabaja.
@@ -333,15 +343,56 @@ invocación de función típica puede tener este aspecto:
 Una invocación de un método típico usualmente se ve así:
 result = data.method(arg)
 
-Un nuevo elemento puede ser añadido al final de la lista existente:
-list.append(value)
+Si un fragmento de código comienza a aparecer en más de una ocasión, considera la posibilidad de aislarlo en la forma de una función
+Demasiados comentarios hacen que el código sea más difícil de leer y entender.una función bien escrita debe ser comprensible con tan solo una mirada.
+Un buen desarrollador divide el código o el problema en piezas aisladas, y codifica cada una de ellas en la forma de una función.
+Si un fragmento de código se hace tan extenso que leerlo o entenderlo se hace complicado, considera dividirlo pequeños problemas por separado e implementa cada uno de ellos como una función independiente.
 
-El metodo insert() puede agregar un nuevo elemento en cualquier lugar de la lista, no solo al final.
-list.insert(location, value)
+*Descomposición
+equipo de desarrolladores para trabajar en un programa grande.
+no se trata de compartir el trabajo, sino de compartir la responsabilidad entre los desarrolladores.
+se debe descomponer el problema para permitir que el producto sea implementado como un conjunto de funciones escritas por separado empacadas juntas en diferentes módulos
+
+*¿De dónde provienen las funciones?
+Las funciones provienen de tres fuentes: 
+1. Python:  funciones (como print()) son una parte integral de Python, se les llama funciones integradas.
+2. Modulos: son menos utilizadas que las integradas y están disponibles en módulos instalados de Python; 
+3. Código: tu puedes escribir tus propias funciones, colocarlas dentro del código, y usarlas libremente.
+ 
+*Tu primer función
+transformar una parte de código que se está repitiendo en una función.
+	print("Ingresa un valor: ")
+	a = int(input())
+
+	print("Ingresa un valor: ")
+	b = int(input())
+
+	print("Ingresa un valor: ")
+	c = int(input())
+
+-Definir la función:
+	comienza con la palabra reservada def
+	Después de def va el nombre de la función
+	Después del nombre de la función, hay un espacio para un par de paréntesis
+	La línea debe de terminar con dos puntos.
+	
+-Consideraciones:
+	No se debe invocar una función antes de que se haya definido.
+	Una función y una variable no pueden compartir el mismo nombre.
+	
+*Existen al menos cuatro tipos de funciones básicas en Python:
+1. Funciones integradas las cuales son partes importantes de Python (como lo es la función print()). Puedes ver una lista --> https://docs.python.org/3/library/functions.html.
+2. Las que se encuentran en módulos pre-instalados.
+3. Funciones definidas por el usuario las cuales son escritas por los programadores para los programadores.
+4. Las funciones lambda.
 
 
-##LISTAS DE LISTAS 
+*Funciones parametrizadas
+	Un parámetro es una variable, pero existen dos factores que hacen a un parámetro diferente:
+		1.Los parámetros solo existen dentro de las funciones en donde han sido definidos.
+		2.La asignación de un valor a un parámetro de una función se hace en el momento en que la función se manda llamar o se invoca.
 
-#TIPS
-La sintaxis de una comprensión de lista es la siguiente:
-[expression for element in list if conditional]
+def function(parameter):
+    ###
+	
+
