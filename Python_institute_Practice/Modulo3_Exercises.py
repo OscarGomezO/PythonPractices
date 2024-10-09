@@ -1,4 +1,7 @@
 
+#######################################################################
+################################---IF---###############################
+#######################################################################
 """
 var = int(input("Ingresa un número: "))
 
@@ -236,11 +239,13 @@ while i < 5:
     i += 1
 else:
     print("else:", i) #--> else:5
-
+"""
 
 #######################################################################
-##############################---FOR---##############################
+##############################---FOR---################################
 #######################################################################
+
+"""
 #EJERCICIO 1
 for i in range(10):
     print("El valor de i es actualmente", i)
@@ -423,12 +428,59 @@ for digit in "0165031806510":
     print(digit, end="")
 """
 
+#Crear un programa que pida al usuario una lista de productos Ciclo While y listas.
+#1
+"""
+lista_productos = []
+producto = ''
+
+while producto.lower() != 'echo':
+    producto = input("Ingrese el nombre del producto: (escriba 'echo' para terminar): ")
+    lista_productos.append(producto)
+
+print("\n Lista de productos")
+contador = 1
+indice = 0
+
+while indice < len(lista_productos):
+    print(f"{contador}.{lista_productos[indice]}")
+    indice += 1
+    contador +=1
+"""
+#2
+"""
+lista_productos = []
+producto = ''
+
+while True:
+    producto = input("Ingrese el nombre del producto: (escriba 'echo' para terminar): ")
+    if producto.lower() == 'echo':
+        break  #Break no incluye "echo" a la lista
+    
+    lista_productos.append(producto)
+
+print("\n Lista de productos")
+for indice, valor in enumerate(lista_productos, start=1):
+    print(f"{indice}.{valor}")
+"""
+
+#Crear un codigo que pida al usuario una lista de productos, Ciclo for y Listas
+"""
+lista_productos = []
+producto = ''
+
+print("\n Lista de productos")
+for indice, valor in enumerate(lista_productos, start=1):
+    print(f"{indice}.{valor}")
+"""
+
+
 #######################################################################
 ##############################---LISTAS---#############################
 #######################################################################
 
 #LISTA VACIA 
-my_list = []
+#my_list = []
 
 #1
 """

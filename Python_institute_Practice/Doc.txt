@@ -194,8 +194,8 @@ la función range() solo acepta enteros como argumentos y genera secuencias de e
 		
 *TIP: -El conjunto generado por range() debe ordenarse en un orden ascendente. El segundo argumento de range() debe ser mayor que el primero.
 	  -Dulces sintácticos o azúcar sintáctica: Simplifican el trabajo del desarrollador (break, continue)
-		break: Sale del bucle inmediatamente
-		continue: Se usa para omitir el bloque actual y avanzar a la siguiente iteración, se comporta como si el programa hubiera llegado repentinamente al final del cuerpo
+		**break: Sale del bucle inmediatamente
+		**continue: Se usa para omitir el bloque actual y avanzar a la siguiente iteración, se comporta como si el programa hubiera llegado repentinamente al final del cuerpo
 for i in range(2, 1):
     print("El valor de i es actualmente", i)
 
@@ -395,4 +395,4 @@ transformar una parte de código que se está repitiendo en una función.
 def function(parameter):
     ###
 	
-
+	
