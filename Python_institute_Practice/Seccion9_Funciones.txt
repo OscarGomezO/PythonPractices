@@ -1,0 +1,31 @@
+
+Resumen
+En esta sección sobre funciones en Python, el estudiante ha aprendido varios conceptos fundamentales:
+
+Definición y uso de funciones: Se ha comprendido que una función en Python es un bloque de código reutilizable que se ejecuta cuando es llamado, lo que permite organizar el código en bloques lógicos y facilita la reutilización del mismo.
+
+Alcance de variables (scope): Se ha entendido que el alcance de una variable determina dónde en el código una variable es accesible. Las variables pueden tener alcance global (todo el programa) o local (solo dentro de una función o bloque).
+
+Argumentos indefinidos: El estudiante ha aprendido que es posible definir funciones que acepten un número variable de argumentos utilizando el operador "*" antes del nombre del parámetro en la definición de la función.
+
+Anotaciones de tipos: Se ha introducido el concepto de anotaciones de tipos, que son declaraciones opcionales en Python que especifican el tipo de datos esperado para los parámetros y el tipo de dato de retorno de una función.
+
+Ahora, con estos conocimientos, el estudiante es capaz de:
+
+Escribir funciones en Python para modularizar y organizar su código de manera más eficiente.
+
+Comprender y aplicar el concepto de alcance de variables para evitar errores relacionados con el acceso a variables.
+
+Utilizar argumentos indefinidos para crear funciones más flexibles que puedan manejar diferentes cantidades de datos de entrada.
+
+Mejorar la legibilidad y la documentación de su código mediante el uso de anotaciones de tipos, lo que facilita la comprensión del código y ayuda a detectar posibles errores de tipo durante el desarrollo.
+
+
+
+Aquí tienes una lista de recursos externos relacionados con funciones en Python:
+
+
+https://docs.python.org/es/3/tutorial/controlflow.html#defining-functions
+https://learn.microsoft.com/es-es/training/modules/functions-python/
+https://www.w3schools.com/python/python_functions.asp
+https://learnpython.org/en/Functions
