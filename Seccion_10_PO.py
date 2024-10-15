@@ -148,7 +148,7 @@ print(g.hablar())
 # _ Hace al atributo privado
 # __ 
 
-#EJEMPLO:
+#EJEMPLO
 #Clase Animal
 class Animal:
     #Constructor
@@ -177,18 +177,8 @@ class Mascota(Animal):          #Ponemos la clase de la que vamos a heredar
         print(f"Mascota[Nombre: {self.__nombre}, Especie: {self.especie}, Edad: {self.especie}]")
 
 
-mascota = Mascota("Perro", "6 Meses", "Bobby")  #Pasamos los siguientes datos
-print(mascota)                  #Imprimimos la información.
-mascota.edad = "2 Años"         #Accedemos al atributo "edad" para modificar el valor de la edad de la mascota.
-print(mascota)                  #Imprimimos la información y la modificación de la edad de la mascota. / El dato de la edad cambia
-mascota.__nombre = "Puppy"      #Accedemos al atributo "__nombre" para modificar el valor del nmbre de la mascota.
-print(mascota)                  #Imprimimos la información y la modificación del nombre de la mascota. / El dato del nombre no cambia porque está encapsulado
 
-#Modificar el valor de un atributo privado
-print(mascota)
-mascota.set_nombre("Puppy")     #Enviamos el nuevo nombre
-print(mascota.get_nombre())     #Modificamos el valor del atributo "nombre" privado
-print(mascota)
+
 
 
 

@@ -1,0 +1,27 @@
+
+RESUMEN
+
+Durante esta sección, los estudiantes aprendieron los fundamentos de la Programación Orientada a Objetos (POO) en el contexto de Python, abordando diversos temas clave:
+Python y POO: Comenzaron entendiendo qué es la POO y cómo Python la implementa como un paradigma de programación que organiza el código en objetos, buscando facilitar la reutilización y la modularidad.
+
+Clases y objetos: Exploraron la diferencia entre clases y objetos, comprendiendo que las clases definen tipos de objetos y sus comportamientos, mientras que los objetos son instancias específicas de esas clases.
+
+Métodos y atributos de instancia: Aprendieron sobre los métodos de instancia, que son funciones asociadas a objetos específicos y pueden acceder a los atributos de esas instancias. También comprendieron la importancia de definir y manipular atributos dentro de las clases.
+
+Herencia y polimorfismo: Se adentraron en el concepto de herencia, que permite a una clase heredar atributos y métodos de otra, promoviendo la reutilización del código y la creación de jerarquías de clases. También entendieron el polimorfismo, que permite tratar objetos de distintas clases de manera uniforme.
+
+Encapsulación: Se familiarizaron con la encapsulación, un principio que consiste en ocultar los detalles de implementación de un objeto y exponer solo una interfaz pública. Esto contribuye a mejorar la seguridad y la cohesión del código.
+
+Proyecto de sección: Registro de mascotas: Aplicaron los conceptos aprendidos en un proyecto práctico, diseñando una estructura de clases para un sistema de registro de mascotas en Python. Este proyecto les permitió consolidar su comprensión y habilidades en POO.
+
+La importancia de esta sección radica en que la Programación Orientada a Objetos es un paradigma fundamental en el desarrollo de software, ampliamente utilizado en la industria. Comprender sus conceptos y aplicaciones en Python no solo les brinda a los estudiantes una base sólida en programación, sino que también les capacita para abordar proyectos más complejos y colaborar eficientemente en equipos de desarrollo. La POO promueve la modularidad, la reutilización del código y una mejor organización del mismo, lo que conduce a un desarrollo más eficiente y mantenible de software. En resumen, esta sección proporciona a los estudiantes las herramientas necesarias para construir programas más robustos y escalables en Python y sentar las bases para su éxito en el mundo de la programación y el desarrollo de software.
+
+
+
+Aquí tienes una lista de recursos externos que los estudiantes pueden utilizar para seguir aprendiendo sobre Programación Orientada a Objetos en Python:
+
+
+https://learn.microsoft.com/es-es/training/modules/python-object-oriented-programming/
+https://docs.python.org/es/3/tutorial/classes.html
+https://www.w3schools.com/python/python_classes.asp
+https://learnpython.org/en/Classes_and_Objects
