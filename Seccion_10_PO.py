@@ -177,9 +177,3 @@ class Mascota(Animal):          #Ponemos la clase de la que vamos a heredar
         print(f"Mascota[Nombre: {self.__nombre}, Especie: {self.especie}, Edad: {self.especie}]")
 
 
-
-
-
-
-
-

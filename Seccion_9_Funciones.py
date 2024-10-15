@@ -251,3 +251,98 @@ def holas(nombres:list)->dict:
 nombres = ["Alex", "Juan", "Carlos", "Pedro"]
 
 print(holas(nombres))
+
+
+#Parametro y Variable con el mismo nombre: SOMBREADO
+#Es posible tener una variable con el mismo nombre del parámetro de la función.
+#El siguiente código muestra un ejemplo de esto:
+
+def message(number):
+    print("Ingresa un número:", number)
+
+number = 1234
+message(1)
+print(number)
+
+
+#Una situación como la anterior, activa un mecanismo denominado sombreado:
+#El parámetro x sombrea cualquier variable con el mismo nombre, pero...
+#... solo dentro de la función que define el parámetro.
+#El parámetro llamado number es una entidad completamente diferente de la variable llamada number.
+#Esto significa que el código anterior producirá la siguiente salida:
+
+    ##Ingresa un número: 1
+    ##1234
+
+
+#Paso de parámetros posicionales
+#La técnica que asigna cada argumento al parámetro correspondiente, es llamada paso de parámetros posicionales, 
+#los argumentos pasados de esta manera son llamados argumentos posicionales.
+
+def my_function(a, b, c):
+    print(a, b, c)
+
+my_function(1, 2, 3)
+
+
+#Paso de argumentos con palabra clave
+#Python ofrece otra manera de pasar argumentos, donde el significado del argumento está definido por su nombre, no su posición, 
+# a esto se le denomina paso de argumentos con palabra clave.
+#Observa el siguiente código:
+
+def introduction(first_name, last_name):
+    print("Hola, mi nombre es", first_name, last_name)
+
+introduction(first_name = "James", last_name = "Bond")
+introduction(last_name = "Skywalker", first_name = "Luke")
+
+#no se debe de utilizar el nombre de un parámetro que no existe.
+
+#Combinar argumentos posicionales y de palabra clave
+#Es posible combinar ambos tipos si se desea, solo hay una regla inquebrantable: 
+# se deben colocar primero los argumentos posicionales y después los de palabra clave.
+def adding(a, b, c):
+    print(a, "+", b, "+", c, "=", a + b + c)
+
+adding(c = 1, a = 2, b = 3)
+#Sé cuidadoso, ten cuidado de no cometer errores. Si se intenta pasar mas de un valor a un argumento, ocurrirá un error y se mostrará lo siguiente:
+adding(3, a = 1, b = 2)
+
+
+#Funciones parametrizadas: más detalles
+def introduction(first_name, last_name="González"):
+    print("Hola, mi nombre es", first_name, last_name)
+
+introduction("Jorge", "Pérez")
+    ##Hola, mi nombre es Jorge Pérez
+
+introduction("Enrique")
+    ##Hola, mi nombre es Enrique González
+
+introduction(first_name="Guillermo")
+    ##Hola, mi nombre es Guillermo González
+
+introduction()
+    ##TypeError: introduction() missing 1 required positional argument: 'first_name'
+
+#Si solo se especifica un argumento de palabra clave, el restante tomará el valor por default:
+
+
+
+#RETURN
+#return sin una expresión
+#La primera consiste en la palabra reservada en sí, sin nada que la siga.
+#Cuando se emplea dentro de una función, provoca la terminación inmediata de la ejecución de la función, y un retorno instantáneo (de ahí el nombre) al punto de invocación.
+#Nota: si una función no está destinada a producir un resultado, emplear la instrucción returnno es obligatorio, se ejecutará implícitamente al final de la función.
+
+def happy_new_year(wishes = True):
+    print("Tres...")
+    print("Dos...")
+    print("Uno...")
+    if not wishes:
+        return
+    
+    print("¡Feliz año nuevo!")
+
+#return con una expresión
+
