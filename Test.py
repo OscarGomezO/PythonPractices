@@ -1,21 +1,20 @@
+onemilla = 1609.344		#Una milla a metros
+onegallon = 3.785411784	#Un galón a litros
 
-def is_prime(num):
-	if num == 1 or num == 0:
-		return False
-	elif num == 2:
-		return True
-	else:
-		for i in range (2, num):
-			if num % 2 == 0:
-				return False
-			elif num % i == 1 and i == num-1:
-				return True
+def liters_100km_to_miles_gallon(liters):
+    result = (100 * onegallon) / (liters * (onemilla/1000))
+    return result
 
+def miles_gallon_to_liters_100km(miles):
+    result = (100 * onegallon)/ (miles * (onemilla/1000))
+    return result
 
-for i in range(1, 20):
-	if is_prime(i):
-		result = is_prime(i)
-		print(i,result, end=" ")
+print(liters_100km_to_miles_gallon(3.9))
+print(liters_100km_to_miles_gallon(7.5))
+print(liters_100km_to_miles_gallon(10.))
+print(miles_gallon_to_liters_100km(60.3))
+print(miles_gallon_to_liters_100km(31.4))
+print(miles_gallon_to_liters_100km(23.5))
 
 
 

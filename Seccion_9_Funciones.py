@@ -596,8 +596,6 @@ print(is_leap_year(year))
 print(f"El mes {month} tiene", days_in_month(month, year), "dias.")
 """
 
-
-
 #NUMEROS PRIMOS
 
 def is_prime(num):
@@ -617,3 +615,66 @@ for i in range(1, 20):
 	if is_prime(i):
 		result = is_prime(i)
 		print(i,result, end=" ")
+
+
+#Convirtiendo el consumo de combustible
+#El consumo de combustible de un automóvil se puede expresar de muchas maneras diferentes. Por ejemplo, en Europa, se muestra como la cantidad de combustible consumido por cada 100 kilómetros.
+#En los EE. UU., se muestra como la cantidad de millas recorridas por un automóvil con un galón de combustible.
+
+onemilla = 1609.344		#Una milla a metros
+onegallon = 3.785411784	#Un galón a litros
+
+def liters_100km_to_miles_gallon(liters):
+    result = (100 * onegallon) / (liters * (onemilla/1000))
+    return result
+
+def miles_gallon_to_liters_100km(miles):
+    result = (100 * onegallon)/ (miles * (onemilla/1000))
+    return result
+
+print(liters_100km_to_miles_gallon(3.9))
+print(liters_100km_to_miles_gallon(7.5))
+print(liters_100km_to_miles_gallon(10.))
+print(miles_gallon_to_liters_100km(60.3))
+print(miles_gallon_to_liters_100km(31.4))
+print(miles_gallon_to_liters_100km(23.5))
+
+#EJERCICIOS
+#1
+def is_int(data):
+    if type(data) == int:
+        return True
+    elif type(data) == float:
+        return False
+
+print(is_int(5))
+print(is_int(5.0))
+print(is_int("5"))
+#True
+#False
+#None
+
+
+#2
+def even_num_lst(ran):
+    lst = []
+    for num in range(ran):
+        if num % 2 == 0:
+            lst.append(num)
+    return lst
+
+print(even_num_lst(11))
+#[0, 2, 4, 6, 8, 10]
+
+#3
+def list_updater(lst):
+    upd_list = []
+    for elem in lst:
+        elem **= 2
+        upd_list.append(elem)
+    return upd_list
+
+foo = [1, 2, 3, 4, 5]
+print(list_updater(foo))
+#[1, 4, 9, 16, 25]
+
