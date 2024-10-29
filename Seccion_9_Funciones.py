@@ -678,3 +678,172 @@ foo = [1, 2, 3, 4, 5]
 print(list_updater(foo))
 #[1, 4, 9, 16, 25]
 
+ 
+#Las funciones y sus alcances
+#1
+#El alcance de un nombre (por ejemplo, el nombre de una variable) es la parte del código donde el nombre es reconocido correctamente.
+def scope_test():
+    x = 123
+
+
+scope_test()
+print(x)
+#NameError: name 'x' is not defined
+
+#2
+# Las funciones y sus alcances:
+#una variable que existe fuera de una función tiene alcance dentro del cuerpo de la función.
+def my_function():
+    print("¿Conozco a la variable?", var)
+
+var = 1
+my_function()
+print(var)
+
+
+#3
+#Las funciones y sus alcances: la palabra clave reservada global
+#El utilizar la palabra reservada dentro de una función con el nombre o nombres de las variables separados por comas, obliga a Python a abstenerse de crear una nueva variable dentro de la función; se empleará la que se puede acceder desde el exterior.
+#Este nombre se convierte en global (tiene un alcance global, y no importa si se esta leyendo o asignando un valor
+def my_function():
+    global var
+    var = 2
+    print("¿Conozco a aquella variable?", var)
+
+
+var = 1
+my_function()
+print(var)
+
+#4
+#Como interactúa la función con sus argumentos
+#al cambiar el valor del parámetro este no se propaga fuera de la función 
+def my_function(n):
+    print("Yo recibí", n)
+    n += 1
+    print("Ahora tengo", n)
+
+
+var = 1
+my_function(var)
+print(var)
+
+#Esto también significa que una función recibe el valor del argumento, no el argumento en sí. 
+def my_function(my_list_1):
+    print("Print #1:", my_list_1)
+    print("Print #2:", my_list_2)
+    my_list_1 = [0, 1]
+    print("Print #3:", my_list_1)
+    print("Print #4:", my_list_2)
+
+
+my_list_2 = [2, 3]
+my_function(my_list_2)
+print("Print #5:", my_list_2)
+
+#Si el argumento es una lista, el cambiar el valor del parámetro correspondiente no afecta la lista (Recuerda: las variables que contienen listas son almacenadas de manera diferente que las escalares).
+#Pero si se modifica la lista identificada por el parámetro (Nota: ¡La lista, no el parámetro!), la lista reflejará el cambio
+def my_function(my_list_1):
+    print("Print #1:", my_list_1)
+    print("Print #2:", my_list_2)
+    del my_list_1[0]  # Presta atención a esta línea.
+    print("Print #3:", my_list_1)
+    print("Print #4:", my_list_2)
+
+
+my_list_2 = [2, 3]
+my_function(my_list_2)
+print("Print #5:", my_list_2)
+
+
+
+#PUNTOS CLAVE - Alcance de las variables en las funciones.
+#Ejemplo 1
+var = 2
+
+
+def mult_by_var(x):
+    return x * var
+
+
+print(mult_by_var(7))    # salida: 14
+
+#Ejemplo2
+def mult(x):
+    var = 5
+    return x * var
+
+
+print(mult(7))    # salida: 35
+
+#Ejemplo3
+def mult(x):
+    var = 7
+    return x * var
+
+
+var = 3
+print(mult(7))    # salida: 49
+
+#Ejemplo4
+def adding(x):
+    var = 7
+    return x + var
+
+
+print(adding(4))    # salida: 11
+print(var)    # NameError
+
+#Ejemplo5
+var = 2
+print(var)    # salida: 2
+
+
+def return_var():
+    global var
+    var = 5
+    return var
+
+
+print(return_var())    # salida: 5
+print(var)    # salida: 5
+
+
+#Ejempo 6
+a = 1
+def fun():
+    a = 2
+    print(a)
+
+fun()
+print(a)
+#2
+#1
+
+#Ejemplo7
+a = 1
+
+def fun():
+    global a
+    a = 2
+    print(a)
+
+fun()
+a = 3
+print(a)
+#2
+#3
+
+#Ejemplo8
+a = 1
+
+def fun():
+    global a
+    a = 2
+    print(a)
+
+a = 3
+fun()
+print(a)
+#2
+#2
