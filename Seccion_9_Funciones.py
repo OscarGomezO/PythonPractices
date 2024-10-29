@@ -847,3 +847,142 @@ fun()
 print(a)
 #2
 #2
+
+
+#FUNCIONES CON MAS DE UN PARÁMETRO
+#1
+def bmi(weight, height):
+    return weight / height ** 2
+
+
+print(bmi(52.5, 1.65))
+
+#2
+def bmi(weight, height):
+    if height < 1.0 or height > 2.5 or \
+    weight < 20 or weight > 200:
+        return None
+
+    return weight / height ** 2
+
+
+print(bmi(352.5, 1.65))
+
+#3  expresión universal para probar triángulos
+def is_a_triangle(a, b, c):
+    if a + b <= c:
+        return False
+    if b + c <= a:
+        return False
+    if c + a <= b:
+        return False
+    return True
+
+
+print(is_a_triangle(1, 1, 1))
+print(is_a_triangle(1, 1, 3))
+
+#4 - triángulos y el Teorema de Pitágoras
+def is_a_triangle(a, b, c):
+    return a + b > c and b + c > a and c + a > b
+
+
+a = float(input('Ingresa la longitud del primer lado: '))
+b = float(input('Ingresa la longitud del segundo lado: '))
+c = float(input('Ingresa la longitud del tercer lado: '))
+
+if is_a_triangle(a, b, c):
+    print('Si, si puede ser un triángulo.')
+else:
+    print('No, no puede ser un triángulo.')
+
+#Pitagoras
+def is_a_triangle(a, b, c):
+    return a + b > c and b + c > a and c + a > b
+
+
+def is_a_right_triangle(a, b, c):
+    if not is_a_triangle(a, b, c):
+        return False
+    if c > a and c > b:
+        return c ** 2 == a ** 2 + b ** 2
+    if a > b and a > c:
+        return a ** 2 == b ** 2 + c ** 2
+
+
+print(is_a_right_triangle(5, 3, 4))
+print(is_a_right_triangle(1, 3, 4))
+
+#5 - evaluando el área de un triángulo
+# La Formula de Heron
+def is_a_triangle(a, b, c):
+    return a + b > c and b + c > a and c + a > b
+
+
+def heron(a, b, c):
+    p = (a + b + c) / 2
+    return (p * (p - a) * (p - b) * (p - c)) ** 0.5
+
+
+def area_of_triangle(a, b, c):
+    if not is_a_triangle(a, b, c):
+        return None
+    return heron(a, b, c)
+
+
+print(area_of_triangle(1., 1., 2. ** .5))
+
+#6 - factoriales
+def factorial_function(n):
+    if n < 0:
+        return None
+    if n < 2:
+        return 1
+    
+    product = 1
+    for i in range(2, n + 1):
+        product *= i
+    return product
+
+
+for n in range(1, 6):  # probando
+    print(n, factorial_function(n))
+
+#7 - Serie Fibonacci
+def fib(n):
+    if n < 1:
+        return None
+    if n < 3:
+        return 1
+
+    elem_1 = elem_2 = 1
+    the_sum = 0
+    for i in range(3, n + 1):
+        the_sum = elem_1 + elem_2
+        elem_1, elem_2 = elem_2, the_sum
+    return the_sum
+
+
+for n in range(1, 10):  # probando
+    print(n, "->", fib(n))
+
+
+#8 - recursividad Fibonacci
+def fib(n):
+    if n < 1:
+        return None
+    if n < 3:
+        return 1
+    return fib(n - 1) + fib(n - 2)
+
+#Si no se considera una condición que detenga las invocaciones recursivas, el programa puede entrar en un bucle infinito.
+
+def factorial_function(n):
+    if n < 0:
+        return None
+    if n < 2:
+        return 1
+    return n * factorial_function(n - 1)
+
+    
+
