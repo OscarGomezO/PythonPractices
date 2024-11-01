@@ -967,7 +967,7 @@ for n in range(1, 10):  # probando
     print(n, "->", fib(n))
 
 
-#8 - recursividad Fibonacci
+#8 - RECURSIVIDAD Serie Fibonacci
 def fib(n):
     if n < 1:
         return None
@@ -984,5 +984,17 @@ def factorial_function(n):
         return 1
     return n * factorial_function(n - 1)
 
-    
+#9
+# Implementación recursiva de la función factorial.
+
+def factorial(n):
+    if n == 1:    # El caso base (condición de terminación).
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+
+print(factorial(4)) # 4 * 3 * 2 * 1 = 24
+
+
 
