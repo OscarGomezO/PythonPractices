@@ -55,3 +55,39 @@ print(-10 not in my_tuple)
 
 
 #¿Cómo utilizar un tupla? 3
+print(phone_numbers['Suzy'])
+#Las claves son sensibles a las mayúsculas y minúsculas: 'Suzy' sería diferente a 'suzy'.
+
+#Ejemplo:
+dictionary = {"gato" : "chat", "perro" : "chien", "caballo" : "cheval"}
+words = ['gato', 'león', 'caballo']
+
+for word in words:
+    if word in dictionary:
+        print(word, "->", dictionary[word])
+    else:
+        print(word, "no está en el diccionario")
+
+# Ejemplo 1:
+dictionary = {
+              "gato": "chat",
+              "perro": "chien",
+              "caballo": "cheval"
+              }
+
+# Ejemplo 2:
+phone_numbers = {'jefe': 5551234567,
+                 'Suzy': 22657854310
+                 }
+
+#Este tipo de formato se llama sangría francesa.
+
+#Ejemplo 3:
+dictionary = {"gato" : "chat", "perro" : "chien", "caballo" : "cheval"}
+phone_numbers = {'jefe' : 5551234567, 'Suzy' : 22657854310}
+empty_dictionary = {}
+
+print("imprimiendo los diccionarios")
+print(dictionary)
+print(phone_numbers)
+print(empty_dictionary)
