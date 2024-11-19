@@ -236,3 +236,113 @@ for col, rgb in colors.items():
 #red : (255, 0, 0)
 #green : (0, 128, 0)
 
+
+#EXCEPCIONES
+#1
+value = int(input('Ingresa un número natural: '))
+print('El recíproco de', value, 'es', 1/value)
+
+#Al ingresa un dato de tipo flotante o string no arrojará el siguiente error.
+#Traceback (most recent call last):
+#  File "code.py", line 1, in 
+#    value = int(input('Ingresa un número natural: '))
+#ValueError: invalid literal for int() with base 10: ''
+
+#comprobar si la variable value es de tipo int
+type(value) is int
+
+#2
+#try - exept
+#"es mejor manejar un error cuando ocurre que tratar de evitarlo".
+try:
+	# Es un lugar donde
+	# tu puedes hacer algo 
+    # sin pedir permiso.
+except:
+	# Es un espacio dedicado 
+    # exclusivamente para pedir perdón.
+
+#3
+try:
+    value = input('Ingresa un número natural: ')
+    print('El recíproco de', value, 'es', 1/int(value))        
+except:
+    print('No se que hacer con', value)
+
+#4 Cómo lidiar con más de una excepción
+try:
+    value = input('Ingresa un número natural: ')
+    print('El recíproco de', value, 'es', 1/int(value))        
+except ValueError:
+    print('No se que hacer con', value)    
+except ZeroDivisionError:
+    print('La división entre cero no está permitida en nuestro Universo.')  
+
+# la cantidad de excepciones no está limitado: puedes especificar tantas o tan pocas como necesites, pero una excepción no se puede especificar más de una vez.
+
+#5 La excepción por defecto y cómo usarla
+try:
+    value = input('Ingresa un número natural: ')
+    print('El recíproco de', value, 'es', 1/int(value))        
+except ValueError:
+    print('No se que hacer con', value)    
+except ZeroDivisionError:
+    print('La división entre cero no está permitida en nuestro Universo.')    
+except:
+    print('Ha sucedido algo extraño, ¡lo siento!')
+
+
+#Excepciones útiles
+
+#1 ZeroDivisionError
+#cuando intentas forzar a Python a realizar cualquier operación que provoque una división en la que el divisor es cero o no se puede distinguir de cero. 
+#operador de Python que puede hacer que se genere esta excepción  /, //, y %.
+
+#2 ValueError
+#cuando estás manejando valores que pueden usarse de manera inapropiada en algún contexto
+#se genera cuando una función (como int() o float()) recibe un argumento de un tipo adecuado, pero su valor es inaceptable.
+
+#3 TypeError
+#Esta excepción aparece cuando intentas aplicar un dato cuyo tipo no se puede aceptar en el contexto actual
+short_list = [1]
+one_value = short_list[0.5]
+#No está permitido usar un valor flotante como índice de una lista (la misma regla también se aplica a las tuplas).
+
+#4 AttributeError
+#cuando intentas activar un método que no existe en un elemento con el que se está tratando
+short_list = [1]
+short_list.append(2)
+short_list.depend(3)
+
+#5 SyntaxError
+#Esta excepción se genera cuando el control llega a una línea de código que viola la gramática de Python
+#NOTA: Es una mala idea manejar este tipo de excepciones en tus programas. Deberías producir código sin errores de sintaxis, en lugar de enmascarar las fallas que has causado.
+
+
+#Rastreando las rutas de ejecución
+#Existen tres rutas o caminos de ejecución independientes en el código, ¿puedes verlas? Están determinadas por las sentencias if-elif-else. Por supuesto, las rutas de ejecución pueden construirse mediante muchas otras sentencias como bucles, o incluso bloques try-except.
+temperature = float(input('Ingresa la temperatura actual:'))
+
+if temperature > 0:
+    print("Por encima de cero")
+elif temperature < 0:
+    print("Por debajo de cero")
+else:
+    print("Cero")
+
+#Cuando Python cierra sus ojos
+#Sí, eliminamos solo una letra y, en efecto, la invocación válida de la función print() se convierte en la obviamente inválida invocación "prin()". No existe tal función como "prin()" en el alcance de nuestro programa, pero ¿es realmente obvio para Python?
+temperature = float(input('Ingresa la temperatura actual:'))
+
+if temperature > 0:
+    print("Por encima de cero")
+elif temperature < 0:
+    prin("Por debajo de cero")
+else:
+    print("Cero")
+
+#IDLE documentation https://www.cs.uky.edu/~keen/help/debug-tutorial/debug.html
+
+
+
+
